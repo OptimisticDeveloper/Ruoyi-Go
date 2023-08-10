@@ -1,0 +1,38 @@
+server:
+  port: 8080
+  runMode: debug # release debug
+  logLevel: debug # debug info warn error
+
+database:
+  type: mysql
+  host: localhost
+  port: 3306
+  username: root
+  password: root
+  dbname: ry-go
+  max_idle_conn: 10
+  max_open_conn: 30
+  conn_max_lifetime: 300
+
+redis:
+  host: localhost
+  port: 6379
+  password:
+  db: 0
+
+jwt:
+  secret: 3Bde3BGEbYqtqyEUzW3ry8jKFcaPH17fRmTmqE7MDr05Lwj95uruRKrrkb44TJ4s
+  jwt_ttl: 43200
+
+xxl-job:
+  enabled: false # 是否开启
+  env: dev
+  admin_address: http://localhost:9100/xxl-job-admin
+  access_token: xxl-job
+  app_name: xxl-job-executor
+  address:
+  ip:
+  port: 9102
+  log_path: /home/xxl-job/log
+  log_retention_days: 7 # 需要大于3
+  http_timeout: 5
